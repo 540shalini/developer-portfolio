@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shalini Gupta Sanjay — Creative Frontend Developer × AI-Assisted Engineering</title>
+  <meta name="description" content="Portfolio of Shalini Gupta Sanjay — Award-winning creative developer aesthetic, Frontend Developer specializing in React Native, Expo, TypeScript, and AI-assisted engineering at Brahmand. B.Sc. IT Graduate from Mumbai University.">
+  <meta property="og:title" content="Shalini Gupta Sanjay — Building the Digital Extraordinary">
+  <meta property="og:description" content="Creative Frontend Developer & AI-assisted engineer crafting resilient mobile applications and modern web experiences.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Google Fonts: Editorial Serif + Tech Sans & Monospace -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="editorial-body">
+  <!-- Interactive Custom Cursor System -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
+  <!-- Background Ambience & Digital Grain -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <canvas id="ambient-canvas" class="ambient-canvas"></canvas>
+
+  <!-- Floating Navigation -->
+  <header class="editorial-nav-wrapper">
+    <nav class="editorial-nav" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" id="nav-brand">
+        <span class="brand-monogram">SG</span>
+        <span class="brand-full">SHALINI</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link" data-magnet>About</a></li>
+        <li><a href="#projects" class="nav-link" data-magnet>Work</a></li>
+        <li><a href="#skills" class="nav-link" data-magnet>Skills</a></li>
+        <li><a href="#timeline" class="nav-link" data-magnet>Experience</a></li>
+        <li><a href="#contact" class="nav-link" data-magnet>Contact</a></li>
+      </ul>
+
+      <div class="nav-cta-box">
+        <a href="#contact" class="nav-pill-btn" data-magnet id="nav-reach-btn">
+          <span>Let's Talk</span>
+          <span class="btn-dot"></span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-header">
+        <span class="brand-full">SHALINI GUPTA SANJAY</span>
+        <button class="drawer-close" id="drawer-close">✕</button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="#about" class="drawer-link">01 / About</a></li>
+        <li><a href="#projects" class="drawer-link">02 / Selected Work</a></li>
+        <li><a href="#skills" class="drawer-link">03 / Tech Constellation</a></li>
+        <li><a href="#timeline" class="drawer-link">04 / Journey & Degrees</a></li>
+        <li><a href="#contact" class="drawer-link">05 / Contact</a></li>
+      </ul>
+      <div class="drawer-footer">
+        <a href="mailto:87794san@gmail.com" class="drawer-email">87794san@gmail.com</a>
+        <span>Mumbai, Maharashtra, India</span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- =================================================================
+         HERO SECTION: Awwwards-Level Editorial & Abstract Motion Visuals
+         ================================================================= -->
+    <section id="hero" class="hero-section">
+      <div class="hero-ambient-grid" aria-hidden="true"></div>
+
+      <!-- Top Availability Badge -->
+      <div class="hero-top-meta reveal-up">
+        <div class="status-indicator">
+          <span class="pulse-core"></span>
+          <span class="status-text">ACTIVELY SEEKING NEW OPPORTUNITIES & COLLABORATIONS</span>
+        </div>
+        <div class="location-stamp">
+          <span>MUMBAI, IN</span> • <span class="time-stamp" id="local-time-clock">17:28 IST</span>
+        </div>
+      </div>
+
+      <!-- Main Headline: Oversized Editorial Typography -->
+      <div class="hero-headline-block">
+        <h1 class="hero-mega-title">
+          <span class="line-reveal"><span class="title-word">BUILDING</span> <span class="title-word">THE</span></span>
+          <span class="line-reveal"><span class="title-word gradient-text">DIGITAL</span></span>
+          <span class="line-reveal"><span class="title-word outline-text">EXTRAORDINARY.</span></span>
+        </h1>
+      </div>
+
+      <!-- Subtitle & Identity Block -->
+      <div class="hero-lower-grid">
+        <div class="hero-bio-column">
+          <div class="identity-lead">
+            <span class="identity-name">SHALINI GUPTA SANJAY</span>
+            <span class="identity-role">Frontend Developer × AI-Assisted Development</span>
+          </div>
+          <p class="hero-supporting-copy">
+            "I turn ideas into interactive digital experiences, combining frontend development, creative problem-solving, and AI-powered workflows."
+          </p>
+
+          <!-- Interactive Opportunities Callout -->
+          <div class="opportunity-hire-badge">
+            <span class="opp-sparkle">✨</span>
+            <span class="opp-text">Open for <strong>Frontend / React Native Developer roles</strong>, AI-native startup teams, and impactful engineering projects.</span>
+          </div>
+
+          <!-- Interactive Email Fast-Copy Action Bar -->
+          <div class="hero-email-dock" data-magnet>
+            <div class="dock-meta">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span class="dock-email-label">87794san@gmail.com</span>
+            </div>
+            <button class="dock-copy-btn" id="hero-quick-copy" title="Copy to clipboard">
+              <span class="copy-idle">COPY EMAIL</span>
+              <span class="copy-success">COPIED! ✓</span>
+            </button>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="action-btn-primary" data-magnet id="hero-cta-work">
+              <span>Explore My Work</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#contact" class="action-btn-ghost" data-magnet id="hero-cta-contact">
+              <span>Connect for Opportunities</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3D Geometric Abstract Sculpture & Floating Fragments -->
+        <div class="hero-visual-column">
+          <div class="abstract-monolith-scene" id="sculpture-card">
+            <div class="sculpture-core">
+              <div class="orbit-ring ring-outer"></div>
+              <div class="orbit-ring ring-middle"></div>
+              <div class="orbit-ring ring-inner"></div>
+              <div class="sculpture-torus">
+                <div class="torus-face f1"></div>
+                <div class="torus-face f2"></div>
+                <div class="torus-face f3"></div>
+              </div>
+            </div>
+
+            <!-- Floating Motion Graphics Chips -->
+            <div class="floating-chip chip-1" data-parallax="0.2">
+              <span class="chip-dot-green"></span>
+              <span class="chip-label">React Native • Expo 57</span>
+            </div>
+            <div class="floating-chip chip-2" data-parallax="-0.25">
+              <span class="chip-icon">🤖</span>
+              <span class="chip-label">AI Coding • Cursor / Antigravity</span>
+            </div>
+            <div class="floating-chip chip-3" data-parallax="0.3">
+              <span class="chip-tag">Brahmand</span>
+              <span class="chip-label">Live App Contributor</span>
+            </div>
+
+            <div class="sculpture-card-glow"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to content">
+        <span class="scroll-track"><span class="scroll-thumb"></span></span>
+        <span class="scroll-text">EXPLORE ARCHIVE</span>
+      </a>
+    </section>
+
+    <!-- =================================================================
+         ABOUT SECTION: Editorial Storytelling & Asymmetric Composition
+         ================================================================= -->
+    <section id="about" class="section about-editorial-section">
+      <div class="editorial-container">
+        <div class="section-badge-row">
+          <span class="editorial-number">01</span>
+          <span class="editorial-label">PHILOSOPHY & STORY</span>
+        </div>
+
+        <div class="about-heroic-split">
+          <div class="about-lead-title-box">
+            <h2 class="editorial-headline">
+              CURIOUS BY NATURE.<br>
+              <span class="gradient-text">BUILDER BY CHOICE.</span>
+            </h2>
+          </div>
+
+          <div class="about-narrative-box">
+            <p class="editorial-body-text lead-para">
+              I'm a <strong>B.Sc. Information Technology</strong> graduate from <em>Nagindas Khandwala College, University of Mumbai</em>. I work on frontend development at <strong>Brahmand</strong>, using AI coding assistants to accelerate implementation while continuously strengthening my programming and software engineering fundamentals.
+            </p>
+            <p class="editorial-body-text">
+              I'm interested in building intuitive digital products, exploring creative interfaces, and understanding how technology transforms ideas into useful experiences.
+            </p>
+
+            <!-- Technical Narrative Pillars -->
+            <div class="narrative-pillars">
+              <div class="pillar-card">
+                <span class="pillar-num">01.</span>
+                <h3 class="pillar-title">User-Centered Mobile Engineering</h3>
+                <p class="pillar-desc">
+                  Building cross-platform mobile screens and components with React Native, Expo Router, and Zustand, focused on tactile smoothness and clarity.
+                </p>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-num">02.</span>
+                <h3 class="pillar-title">AI-Assisted Workflow Fluency</h3>
+                <p class="pillar-desc">
+                  Leveraging Cursor, Claude, Antigravity, and Codex to accelerate boilerplate, refine UX states, and iterate with unprecedented velocity.
+                </p>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-num">03.</span>
+                <h3 class="pillar-title">Solid Web Foundations</h3>
+                <p class="pillar-desc">
+                  Rooted in clean HTML5, CSS3 typography, JavaScript (ES6+), PHP, MySQL, and academic distinction with 8.15 CGPA.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SELECTED WORK: Large-Scale Editorial Gallery with Real Screenshots
+         ================================================================= -->
+    <section id="projects" class="section projects-editorial-section">
+      <div class="editorial-container">
+        <div class="section-badge-row">
+          <span class="editorial-number">02</span>
+          <span class="editorial-label">FEATURED PRODUCTION & ACADEMIC CASE STUDIES</span>
+        </div>
+        <h2 class="editorial-headline-large">SELECTED WORK</h2>
+
+        <!-- PROJECT 01: BRAHMAND -->
+        <article class="project-showcase brahmand-editorial-showcase" id="project-case-brahmand">
+          <!-- Real Mobile Screen Mockup Pair -->
+          <div class="project-showcase-visual">
+            <div class="dual-phone-presentation">
+              <!-- Live Jaap & Devotional Home Screen -->
+              <div class="phone-frame phone-1" data-parallax="0.1">
+                <div class="phone-notch"></div>
+                <img src="assets/brahmand_live_screen.png" alt="Brahmand Hanuman Chalisa Live Jaap and Devotional Home Screen" class="phone-screen-img" loading="lazy">
+                <div class="phone-caption">Live Jaap & Home Feed</div>
+              </div>
+
+              <!-- Community & Help Center Screen -->
+              <div class="phone-frame phone-2" data-parallax="-0.12">
+                <div class="phone-notch"></div>
+                <img src="assets/brahmand_community_screen.png" alt="Brahmand Community and Help Request Screen" class="phone-screen-img" loading="lazy">
+                <div class="phone-caption">Help Your Community</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-content">
+            <div class="project-meta-top">
+              <span class="project-num-tag">PROJECT 01</span>
+              <span class="project-type-tag">MOBILE APPLICATION / FRONTEND DEVELOPMENT</span>
+            </div>
+
+            <h3 class="project-main-title">BRAHMAND</h3>
+            
+            <p class="project-synopsis">
+              "A spiritual and community-focused application connecting devotional experiences, temples, events, and community features."
+            </p>
+
+            <div class="project-detail-block">
+              <span class="detail-label">MY CONTRIBUTION & SCREEN IMPLEMENTATIONS</span>
+              <p class="detail-value">
+                Frontend development and AI-assisted feature implementation across core screens including <strong>Hanuman Chalisa Live Jaap tracking</strong>, live ritual events, devotional community feeds, and the <strong>"Help Your Community"</strong> assistance grid (Blood Request, Emergency Help, Food support, and Temple seva).
+              </p>
+            </div>
+
+            <div class="project-tech-ribbon">
+              <span class="tech-chip">React Native</span>
+              <span class="tech-chip">Expo 57</span>
+              <span class="tech-chip">TypeScript</span>
+              <span class="tech-chip">Expo Router</span>
+              <span class="tech-chip">Zustand</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="project-action-btn inspect-case-btn" data-project="brahmand" data-magnet>
+                <span>View Case Study Specs</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 02: PURISTINE FOODS -->
+        <article class="project-showcase reversed" id="project-case-puristine">
+          <div class="project-showcase-visual">
+            <div class="device-mockup-frame web-frame">
+              <img src="assets/puristine_preview.jpg" alt="Puristine Foods E-Commerce Preview" class="device-media-img" loading="lazy">
+              <div class="device-overlay-glow"></div>
+            </div>
+          </div>
+
+          <div class="project-showcase-content">
+            <div class="project-meta-top">
+              <span class="project-num-tag">PROJECT 02</span>
+              <span class="project-type-tag">E-COMMERCE / ACADEMIC PROJECT</span>
+            </div>
+
+            <h3 class="project-main-title">PURISTINE FOODS</h3>
+            
+            <p class="project-synopsis">
+              "An e-commerce website concept designed to introduce Indian snacks and ready-to-eat products to international customers."
+            </p>
+
+            <div class="project-detail-block">
+              <span class="detail-label">IMPLEMENTED FEATURES</span>
+              <p class="detail-value">
+                Product catalog listings, user login/auth, shopping cart, checkout flow, customer review module, and an admin sales analytics dashboard powered by Chart.js.
+              </p>
+              <span class="academic-note-badge">Academic project · Evaluated & documented</span>
+            </div>
+
+            <div class="project-tech-ribbon">
+              <span class="tech-chip">HTML5</span>
+              <span class="tech-chip">CSS3</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">PHP</span>
+              <span class="tech-chip">MySQL</span>
+              <span class="tech-chip">Chart.js</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="project-action-btn inspect-case-btn" data-project="puristine" data-magnet>
+                <span>View Architecture & Screens</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SKILLS: Interactive Constellation & Node Matrix
+         ================================================================= -->
+    <section id="skills" class="section skills-constellation-section">
+      <div class="editorial-container">
+        <div class="section-badge-row">
+          <span class="editorial-number">03</span>
+          <span class="editorial-label">CAPABILITIES & ARSENAL</span>
+        </div>
+        <h2 class="editorial-headline-large">TECHNOLOGY CONSTELLATION</h2>
+        <p class="editorial-section-sub">
+          Honest representation of frameworks, engineering tools, and AI workflows applied in production and academic builds.
+        </p>
+
+        <!-- Category Cluster Switcher -->
+        <div class="constellation-nav" role="tablist">
+          <button class="cluster-btn active" data-category="all" role="tab">All Orbitals</button>
+          <button class="cluster-btn" data-category="frontend" role="tab">Frontend</button>
+          <button class="cluster-btn" data-category="ai" role="tab">AI-Assisted Development</button>
+          <button class="cluster-btn" data-category="backend" role="tab">Backend & Databases</button>
+          <button class="cluster-btn" data-category="additional" role="tab">Additional Knowledge</button>
+        </div>
+
+        <!-- Interactive Constellation Grid Canvas & Nodes -->
+        <div class="constellation-grid" id="constellation-nodes">
+          <!-- FRONTEND CLUSTER -->
+          <div class="tech-node" data-category="frontend" tabindex="0">
+            <div class="node-glow"></div>
+            <span class="node-icon">⚛️</span>
+            <div class="node-body">
+              <span class="node-title">React Native</span>
+              <span class="node-role">Cross-Platform Mobile</span>
+            </div>
+            <div class="node-tooltip">Hands-on experience in Brahmand mobile frontend architecture.</div>
+          </div>
+
+          <div class="tech-node" data-category="frontend" tabindex="0">
+            <div class="node-glow"></div>
+            <span class="node-icon">🚀</span>
+            <div class="node-body">
+              <span class="node-title">Expo & Expo Router</span>
+              <span class="node-role">App Toolchain & Navigation</span>
+            </div>
+            <div class="node-tooltip">File-based routing, screen transitions, and multi-device testing.</div>
+          </div>
+
+          <div class="tech-node" data-category="frontend" tabindex="0">
+            <div class="node-glow"></div>
+            <span class="node-icon">📘</span>
+            <div class="node-body">
+              <span class="node-title">TypeScript</span>
+              <span class="node-role">Typed UI Components</span>
+            </div>
+            <div class="node-tooltip">Strongly typed state models, interface definitions, and props contracts.</div>
+          </div>
+
+          <div class="tech-node" data-category="frontend" tabindex="0">
+            <div class="node-glow"></div>
+            <span class="node-icon">⚡</span>
+            <div class="node-body">
+              <span class="node-title">JavaScript (ES6+)</span>
+              <span class="node-role">Core Web Logic</span>
+            </div>
+            <div class="node-tooltip">Asynchronous programming, closures, promises, and DOM workflows.</div>
+          </div>
+
+          <div class="tech-node" data-category="frontend" tabindex="0">
+            <div class="node-glow"></div>
+            <span class="node-icon">🌐</span>
+            <div class="node-body">
+              <span class="node-title">HTML5</span>
+              <span class="node-role">Semantic Web Architecture</span>
+            </div>
+            <div class="node-tooltip">Accessibility (A11y), clean DOM structure, and SEO standards.</div>
+          </div>
+
+          <div class="tech-node" data-category="frontend" tabindex="0">
+            <div class="node-glow"></div>
+            <span class="node-icon">🎨</span>
+            <div class="node-body">
+              <span class="node-title">CSS3</span>
+              <span class="node-role">Modern Layouts & Motion</span>
+            </div>
+            <div class="node-tooltip">Flexbox, CSS Grid, custom properties, and smooth keyframe animations.</div>
+          </div>
+
+          <!-- AI-ASSISTED DEVELOPMENT CLUSTER -->
+          <div class="tech-node highlight-ai" data-category="ai" tabindex="0">
+            <div class="node-glow ai-glow"></div>
+            <span class="node-icon">🤖</span>
+            <div class="node-body">
+              <span class="node-title">Cursor</span>
+              <span class="node-role">AI Coding Environment</span>
+            </div>
+            <div class="node-tooltip">Code generation, multi-file refactoring, and AI-assisted debugging.</div>
+          </div>
+
+          <div class="tech-node highlight-ai" data-category="ai" tabindex="0">
+            <div class="node-glow ai-glow"></div>
+            <span class="node-icon">🧠</span>
+            <div class="node-body">
+              <span class="node-title">Claude</span>
+              <span class="node-role">Architectural Reasoning</span>
+            </div>
+            <div class="node-tooltip">Logical edge case discovery, system design checks, and doc extraction.</div>
+          </div>
+
+          <div class="tech-node highlight-ai" data-category="ai" tabindex="0">
+            <div class="node-glow ai-glow"></div>
+            <span class="node-icon">✨</span>
+            <div class="node-body">
+              <span class="node-title">Antigravity</span>
+              <span class="node-role">Autonomous Coding Assistant</span>
+            </div>
+            <div class="node-tooltip">End-to-end task automation, rapid prototyping, and workflow tooling.</div>
+          </div>
+
+          <div class="tech-node highlight-ai" data-category="ai" tabindex="0">
+            <div class="node-glow ai-glow"></div>
+            <span class="node-icon">💻</span>
+            <div class="node-body">
+              <span class="node-title">Codex & AI Workflows</span>
+              <span class="node-role">Workflow Acceleration</span>
+            </div>
+            <div class="node-tooltip">Iterative prompt engineering, unit testing assist, and velocity boost.</div>
+          </div>
+
+          <!-- BACKEND & DATABASES CLUSTER -->
+          <div class="tech-node" data-category="backend" tabindex="0">
+            <div class="node-glow"></div>
+            <span class="node-icon">🐘</span>
+            <div class="node-body">
+              <span class="node-title">PHP</span>
+              <span class="node-role">Server-Side Scripts</span>
+            </div>
+            <div class="node-tooltip">Applied in academic e-commerce backend (Puristine Foods).</div>
+          </div>
+
+          <div class="tech-node" data-category="backend" tabindex="0">
+            <div class="node-glow"></div>
+            <span class="node-icon">🗄️</span>
+            <div class="node-body">
+              <span class="node-title">MySQL & SQL</span>
+              <span class="node-role">Relational Databases</span>
+            </div>
+            <div class="node-tooltip">Schema design, relational joins, table indexing, and CRUD pipelines.</div>
+          </div>
+
+          <!-- ADDITIONAL KNOWLEDGE CLUSTER -->
+          <div class="tech-node" data-category="additional" tabindex="0">
+            <div class="node-glow"></div>
+            <span class="node-icon">☕</span>
+            <div class="node-body">
+              <span class="node-title">Java Basics</span>
+              <span class="node-role">OOP Concepts</span>
+            </div>
+            <div class="node-tooltip">Core object-oriented design and programming principles.</div>
+          </div>
+
+          <div class="tech-node" data-category="additional" tabindex="0">
+            <div class="node-glow"></div>
+            <span class="node-icon">📊</span>
+            <div class="node-body">
+              <span class="node-title">Power BI Fundamentals</span>
+              <span class="node-role">Business Intelligence</span>
+            </div>
+            <div class="node-tooltip">Data models, chart dashboards, and KPI summaries.</div>
+          </div>
+
+          <div class="tech-node" data-category="additional" tabindex="0">
+            <div class="node-glow"></div>
+            <span class="node-icon">📈</span>
+            <div class="node-body">
+              <span class="node-title">MS Excel</span>
+              <span class="node-role">Spreadsheet Analytics</span>
+            </div>
+            <div class="node-tooltip">Formulas, data manipulation, and structured records.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         TIMELINE: Experience & Academic Milestones
+         ================================================================= -->
+    <section id="timeline" class="section timeline-editorial-section">
+      <div class="editorial-container">
+        <div class="section-badge-row">
+          <span class="editorial-number">04</span>
+          <span class="editorial-label">CAREER & QUALIFICATIONS</span>
+        </div>
+        <h2 class="editorial-headline-large">TIMELINE</h2>
+
+        <div class="editorial-timeline">
+          <!-- Role: Brahmand -->
+          <div class="timeline-row active-now">
+            <div class="timeline-meta-col">
+              <span class="timeline-badge-live">CURRENT ROLE</span>
+              <span class="timeline-time-label">2025 — Present</span>
+            </div>
+            <div class="timeline-main-col">
+              <h3 class="timeline-role-title">Frontend Developer — Brahmand</h3>
+              <span class="timeline-entity">Spiritual & Community Mobile Platform</span>
+              <p class="timeline-desc">
+                Focus on frontend development and AI-assisted feature implementation. Contributing to user interfaces, navigation flows, and interactive devotional screens using React Native, Expo, TypeScript, and Zustand.
+              </p>
+              <div class="timeline-tech-tags">
+                <span>React Native</span>
+                <span>Expo Router</span>
+                <span>TypeScript</span>
+                <span>AI Tooling</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Degree: B.Sc. IT -->
+          <div class="timeline-row">
+            <div class="timeline-meta-col">
+              <span class="timeline-badge-edu">DEGREE CONFERRED</span>
+              <span class="timeline-time-label">Graduated April 2025</span>
+            </div>
+            <div class="timeline-main-col">
+              <h3 class="timeline-role-title">Bachelor of Science in Information Technology (B.Sc. IT)</h3>
+              <span class="timeline-entity">Nagindas Khandwala College, University of Mumbai</span>
+              <div class="timeline-metric-callout">
+                <span class="metric-accent">CGPA: 8.15</span> • Academic Distinction
+              </div>
+              <p class="timeline-desc">
+                Completed comprehensive coursework spanning web development, data structures, database management systems, software engineering, and applied computing.
+              </p>
+            </div>
+          </div>
+
+          <!-- HSC -->
+          <div class="timeline-row">
+            <div class="timeline-meta-col">
+              <span class="timeline-badge-board">HSC SCIENCE</span>
+              <span class="timeline-time-label">Higher Secondary</span>
+            </div>
+            <div class="timeline-main-col">
+              <h3 class="timeline-role-title">Higher Secondary Certificate (HSC)</h3>
+              <span class="timeline-entity">Shri Tikamdas Purushottam Bhatia College of Science</span>
+              <div class="timeline-metric-callout">
+                <span class="metric-accent">80.33%</span> • Maharashtra State Board
+              </div>
+            </div>
+          </div>
+
+          <!-- SSC -->
+          <div class="timeline-row">
+            <div class="timeline-meta-col">
+              <span class="timeline-badge-board">SSC HIGH SCHOOL</span>
+              <span class="timeline-time-label">Secondary School</span>
+            </div>
+            <div class="timeline-main-col">
+              <h3 class="timeline-role-title">Secondary School Certificate (SSC)</h3>
+              <span class="timeline-entity">Holy Infant High School</span>
+              <div class="timeline-metric-callout">
+                <span class="metric-accent">66.20%</span> • Maharashtra State Board
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         CONTACT: Memorable Editorial Finale & Opportunities Center
+         ================================================================= -->
+    <section id="contact" class="section contact-editorial-section">
+      <div class="editorial-container">
+        <div class="contact-card-monolith">
+          <div class="contact-badge-top">
+            <span class="pulse-core"></span>
+            <span>LOOKING FOR NEW OPPORTUNITIES TO CONNECT</span>
+          </div>
+
+          <h2 class="contact-giant-headline">
+            HAVE AN IDEA?<br>
+            <span class="gradient-text">LET'S MAKE IT REAL.</span>
+          </h2>
+
+          <p class="contact-lead-copy">
+            "I'm actively seeking new frontend development opportunities, AI-assisted engineering roles, and innovative digital product teams. Whether you have an open position, a project collaboration, or want to discuss technical ideas — I'd love to connect!"
+          </p>
+
+          <!-- Direct Channel Action Cluster -->
+          <div class="contact-channels-cluster">
+            <a href="mailto:87794san@gmail.com" class="channel-pill-cta" data-magnet id="contact-mail-cta">
+              <span class="pill-icon">✉️</span>
+              <span class="pill-text">87794san@gmail.com</span>
+              <span class="pill-badge">Direct Mail</span>
+            </a>
+
+            <a href="https://github.com/shalini05" target="_blank" rel="noopener noreferrer" class="channel-pill-cta" data-magnet id="contact-github-link">
+              <span class="pill-icon">🐙</span>
+              <span class="pill-text">github.com/shalini05</span>
+              <span class="pill-badge">Code Repos</span>
+            </a>
+
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="channel-pill-cta" data-magnet id="contact-linkedin-link">
+              <span class="pill-icon">💼</span>
+              <span class="pill-text">LinkedIn Profile</span>
+              <span class="pill-badge">Professional</span>
+            </a>
+          </div>
+
+          <!-- Clean Direct Message Form -->
+          <form class="editorial-contact-form" id="portfolio-contact-form">
+            <div class="form-grid">
+              <div class="input-cell">
+                <label for="form-name">NAME</label>
+                <input type="text" id="form-name" name="name" required placeholder="Alex Henderson">
+              </div>
+              <div class="input-cell">
+                <label for="form-email">EMAIL ADDRESS</label>
+                <input type="email" id="form-email" name="email" required placeholder="alex@company.com">
+              </div>
+            </div>
+            <div class="input-cell">
+              <label for="form-subject">INQUIRY / OPPORTUNITY TYPE</label>
+              <select id="form-subject" name="subject">
+                <option value="frontend">Frontend / React Native Developer Opportunity</option>
+                <option value="ai-native">AI-Native Developer / Startup Role</option>
+                <option value="contract">Project Build / Creative Collaboration</option>
+                <option value="connect">Professional Networking & Mentorship</option>
+              </select>
+            </div>
+            <div class="input-cell">
+              <label for="form-message">MESSAGE</label>
+              <textarea id="form-message" name="message" rows="3" required placeholder="Hi Shalini, I came across your Brahmand work and would love to discuss an opportunity..."></textarea>
+            </div>
+            <button type="submit" class="form-submit-editorial" data-magnet id="form-submit-btn">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+            <div class="form-status-msg" id="form-status-msg" role="alert" style="display:none;"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Project Case Study Dialog -->
+  <dialog id="project-modal" class="editorial-dialog">
+    <div class="dialog-frame">
+      <div class="dialog-header">
+        <h3 id="dialog-title" class="dialog-headline">Project Case Study</h3>
+        <button id="close-dialog-btn" class="dialog-close-btn" aria-label="Close dialog">✕</button>
+      </div>
+      <div class="dialog-content-body" id="dialog-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Footer -->
+  <footer class="editorial-footer">
+    <div class="editorial-container footer-flex">
+      <div class="footer-left-col">
+        <span class="footer-name">SHALINI GUPTA SANJAY</span>
+        <p class="footer-quote">
+          Frontend Developer × AI-Assisted Development • Open for New Opportunities • Mumbai, India
+        </p>
+      </div>
+      <div class="footer-right-col">
+        <span class="footer-copy">© <span id="current-year">2026</span> Shalini Gupta Sanjay. All rights reserved.</span>
+        <span class="footer-sub"><a href="mailto:87794san@gmail.com" style="color:var(--accent-cyan); text-decoration:none;">87794san@gmail.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
